@@ -1,9 +1,11 @@
-import { IsString, MinLength } from "class-validator";
+import { IsString } from 'class-validator';
 
-export class CreateCarDto{
-    @IsString({message: 'Mensaje de error personalizado'})
-    readonly brand: string;
+export class CreateCarDto {
+
     @IsString()
-    //@MinLength(3)
+    readonly brand: string;
+
+    @IsString()
     readonly model: string;
+
 }
